@@ -23,7 +23,7 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{//настройка защиты http путей
         http.csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(req ->
-                        req.requestMatchers("")//Содержит "белый список"
+                        req.requestMatchers("/api/v1/auth/**")//Содержит "белый список"
                                 .permitAll()//доступ к этому списку у всех
                                 .anyRequest()//остальные запросы только по авторизации
                                 .authenticated()

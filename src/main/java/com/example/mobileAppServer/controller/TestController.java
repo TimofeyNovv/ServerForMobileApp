@@ -1,6 +1,6 @@
 package com.example.mobileAppServer.controller;
 
-import com.example.mobileAppServer.controller.dto.UserRequest;
+import com.example.mobileAppServer.controller.auth.dto.RegisterRequest;
 import com.example.mobileAppServer.entity.UserEntity;
 import com.example.mobileAppServer.service.impl.UserServiceImpl;
 import jakarta.validation.Valid;
@@ -20,7 +20,7 @@ public class TestController {
     }
 
     @PostMapping("user/create")
-    public ResponseEntity<UserEntity> createUser(@Valid @RequestBody UserRequest userRequest){
+    public ResponseEntity<UserEntity> createUser(@Valid @RequestBody RegisterRequest userRequest){
         UserEntity userEntity = new UserEntity();
         userEntity.setName(userRequest.getName());
         userEntity.setEmail(userRequest.getEmail());
