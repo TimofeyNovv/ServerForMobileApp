@@ -1,7 +1,5 @@
 package com.example.mobileAppServer.service.impl;
 
-import com.example.mobileAppServer.controller.dto.UserRequest;
-import com.example.mobileAppServer.entity.UserRole;
 import com.example.mobileAppServer.exception.UserNotFoundException;
 import com.example.mobileAppServer.repository.UserRepository;
 import com.example.mobileAppServer.entity.UserEntity;

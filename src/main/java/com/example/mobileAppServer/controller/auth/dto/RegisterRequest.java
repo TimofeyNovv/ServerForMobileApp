@@ -1,12 +1,18 @@
-package com.example.mobileAppServer.controller.dto;
+package com.example.mobileAppServer.controller.auth.dto;
 
 import com.example.mobileAppServer.entity.UserRole;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
-public class UserRequest {
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+public class RegisterRequest {
 
     @NotEmpty
     private String name;
