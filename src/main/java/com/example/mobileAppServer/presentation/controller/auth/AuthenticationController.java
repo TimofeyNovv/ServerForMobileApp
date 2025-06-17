@@ -1,8 +1,8 @@
-package com.example.mobileAppServer.controller.auth;
+package com.example.mobileAppServer.presentation.controller.auth;
 
-import com.example.mobileAppServer.controller.auth.dto.AuthenticationRequest;
-import com.example.mobileAppServer.controller.auth.dto.AuthenticationResponse;
-import com.example.mobileAppServer.controller.auth.dto.RegisterRequest;
+import com.example.mobileAppServer.presentation.controller.auth.dto.AuthenticationRequest;
+import com.example.mobileAppServer.presentation.controller.auth.dto.AuthenticationResponse;
+import com.example.mobileAppServer.presentation.controller.auth.dto.RegisterRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

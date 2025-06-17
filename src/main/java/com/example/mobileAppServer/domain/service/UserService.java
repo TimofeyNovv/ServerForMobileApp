@@ -1,6 +1,6 @@
-package com.example.mobileAppServer.service;
+package com.example.mobileAppServer.domain.service;
 
-import com.example.mobileAppServer.entity.UserEntity;
+import com.example.mobileAppServer.domain.entity.UserEntity;
 
 
 public interface UserService {

@@ -1,9 +1,9 @@
-package com.example.mobileAppServer.service.impl;
+package com.example.mobileAppServer.infrastructure.impl;
 
-import com.example.mobileAppServer.exception.UserNotFoundException;
-import com.example.mobileAppServer.repository.UserRepository;
-import com.example.mobileAppServer.entity.UserEntity;
-import com.example.mobileAppServer.service.UserService;
+import com.example.mobileAppServer.domain.exception.UserNotFoundException;
+import com.example.mobileAppServer.domain.repository.UserRepository;
+import com.example.mobileAppServer.domain.entity.UserEntity;
+import com.example.mobileAppServer.domain.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

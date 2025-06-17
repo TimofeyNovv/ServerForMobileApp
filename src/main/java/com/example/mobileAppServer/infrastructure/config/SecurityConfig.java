@@ -1,4 +1,4 @@
-package com.example.mobileAppServer.config;
+package com.example.mobileAppServer.infrastructure.config;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;

@@ -1,4 +1,4 @@
-package com.example.mobileAppServer.controller.auth.dto;
+package com.example.mobileAppServer.presentation.controller.auth.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

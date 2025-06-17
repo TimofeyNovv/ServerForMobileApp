@@ -1,4 +1,4 @@
-package com.example.mobileAppServer.entity;
+package com.example.mobileAppServer.domain.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

@@ -1,7 +1,7 @@
-package com.example.mobileAppServer.config;
+package com.example.mobileAppServer.infrastructure.config;
 
-import com.example.mobileAppServer.exception.UserNotFoundException;
-import com.example.mobileAppServer.repository.UserRepository;
+import com.example.mobileAppServer.domain.exception.UserNotFoundException;
+import com.example.mobileAppServer.domain.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

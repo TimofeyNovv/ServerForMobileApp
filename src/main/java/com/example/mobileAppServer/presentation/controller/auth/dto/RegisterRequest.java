@@ -1,6 +1,6 @@
-package com.example.mobileAppServer.controller.auth.dto;
+package com.example.mobileAppServer.presentation.controller.auth.dto;
 
-import com.example.mobileAppServer.entity.UserRole;
+import com.example.mobileAppServer.domain.entity.UserRole;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;

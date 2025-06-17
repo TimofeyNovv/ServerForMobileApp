@@ -1,6 +1,6 @@
-package com.example.mobileAppServer.config;
+package com.example.mobileAppServer.infrastructure.config;
 
-import com.example.mobileAppServer.service.JwtService;
+import com.example.mobileAppServer.infrastructure.security.JwtService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

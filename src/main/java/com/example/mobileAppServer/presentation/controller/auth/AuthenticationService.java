@@ -1,19 +1,17 @@
-package com.example.mobileAppServer.controller.auth;
+package com.example.mobileAppServer.presentation.controller.auth;
 
-import com.example.mobileAppServer.controller.auth.dto.AuthenticationRequest;
-import com.example.mobileAppServer.controller.auth.dto.AuthenticationResponse;
-import com.example.mobileAppServer.controller.auth.dto.RegisterRequest;
-import com.example.mobileAppServer.entity.UserEntity;
-import com.example.mobileAppServer.entity.UserRole;
-import com.example.mobileAppServer.repository.UserRepository;
-import com.example.mobileAppServer.service.JwtService;
+import com.example.mobileAppServer.presentation.controller.auth.dto.AuthenticationRequest;
+import com.example.mobileAppServer.presentation.controller.auth.dto.AuthenticationResponse;
+import com.example.mobileAppServer.presentation.controller.auth.dto.RegisterRequest;
+import com.example.mobileAppServer.domain.entity.UserEntity;
+import com.example.mobileAppServer.domain.entity.UserRole;
+import com.example.mobileAppServer.domain.repository.UserRepository;
+import com.example.mobileAppServer.infrastructure.security.JwtService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-
-import javax.management.relation.Role;
 
 @Service
 @RequiredArgsConstructor

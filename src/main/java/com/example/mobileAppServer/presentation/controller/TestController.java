@@ -1,8 +1,8 @@
-package com.example.mobileAppServer.controller;
+package com.example.mobileAppServer.presentation.controller;
 
-import com.example.mobileAppServer.controller.auth.dto.RegisterRequest;
-import com.example.mobileAppServer.entity.UserEntity;
-import com.example.mobileAppServer.service.impl.UserServiceImpl;
+import com.example.mobileAppServer.presentation.controller.auth.dto.RegisterRequest;
+import com.example.mobileAppServer.domain.entity.UserEntity;
+import com.example.mobileAppServer.infrastructure.impl.UserServiceImpl;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

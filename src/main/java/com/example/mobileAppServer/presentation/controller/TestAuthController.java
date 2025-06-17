@@ -1,4 +1,4 @@
-package com.example.mobileAppServer.controller;
+package com.example.mobileAppServer.presentation.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

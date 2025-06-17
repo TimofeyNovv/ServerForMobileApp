@@ -1,4 +1,4 @@
-package com.example.mobileAppServer.service;
+package com.example.mobileAppServer.infrastructure.security;
 
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;

@@ -1,6 +1,6 @@
-package com.example.mobileAppServer.repository;
+package com.example.mobileAppServer.domain.repository;
 
-import com.example.mobileAppServer.entity.UserEntity;
+import com.example.mobileAppServer.domain.entity.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

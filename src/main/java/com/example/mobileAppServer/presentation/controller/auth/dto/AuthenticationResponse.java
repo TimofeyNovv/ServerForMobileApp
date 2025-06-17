@@ -1,4 +1,4 @@
-package com.example.mobileAppServer.controller.auth.dto;
+package com.example.mobileAppServer.presentation.controller.auth.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
