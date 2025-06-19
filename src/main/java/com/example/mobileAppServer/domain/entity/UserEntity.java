@@ -1,10 +1,7 @@
 package com.example.mobileAppServer.domain.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -13,20 +10,23 @@ import java.util.Collection;
 import java.util.List;
 
 @Entity
-@Data
+@Setter
+@Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 @Table(name = "user_table")
-public class UserEntity implements UserDetails {
+public class UserEntity extends BaseEntity implements UserDetails{
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-
+    @Column
     private String name;
+
+    @Column
     private String email;
+
+    @Column
     private String password;
+
     @Enumerated(EnumType.STRING)
     private UserRole role;
 
