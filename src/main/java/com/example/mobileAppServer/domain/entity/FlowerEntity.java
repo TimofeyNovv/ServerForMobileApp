@@ -1,24 +1,26 @@
 package com.example.mobileAppServer.domain.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Entity
-@Data
+@Setter
+@Getter
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "flowers")
-public class FlowerEntity {
+public class FlowerEntity extends BaseEntity{
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    @Column
+    private String image;
 
+    @Column
     private String name;
+
+    @Column
     private Double price;
+
+    @Column
     private Double rating;
 }
