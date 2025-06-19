@@ -1,10 +1,13 @@
 package com.example.mobileAppServer.presentation.controller;
 
 import com.example.mobileAppServer.domain.entity.FlowerEntity;
+import com.example.mobileAppServer.domain.service.PurchaseItemService;
 import com.example.mobileAppServer.infrastructure.implServices.FlowerServiceImpl;
+import com.example.mobileAppServer.infrastructure.implServices.PurchaseItemServiceImpl;
 import com.example.mobileAppServer.presentation.controller.auth.dto.RegisterRequest;
 import com.example.mobileAppServer.domain.entity.UserEntity;
 import com.example.mobileAppServer.infrastructure.implServices.UserServiceImpl;
+import com.example.mobileAppServer.presentation.controller.dto.FinishPurchaseRequest;
 import com.example.mobileAppServer.presentation.controller.dto.FlowerRequest;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -17,6 +20,7 @@ import org.springframework.web.bind.annotation.*;
 public class TestController {
     private final UserServiceImpl userService;
     private final FlowerServiceImpl flowerService;
+    private final PurchaseItemServiceImpl purchaseItemService;
 
     @GetMapping("/email/{email}")
     public UserEntity findUserByEmail(@PathVariable String email){
@@ -34,5 +38,10 @@ public class TestController {
         UserEntity savedUser = userService.create(userEntity);
 
         return ResponseEntity.ok(savedUser);
+    }
+
+    @PostMapping("/fpr")
+    public Integer createPurchase(@Valid @RequestBody FinishPurchaseRequest finishPurchaseRequest){
+        return purchaseItemService.finishPurchase(finishPurchaseRequest);
     }
 }

@@ -7,5 +7,7 @@ public interface FlowerService {
 
     FlowerEntity findByName(String name);
 
+    FlowerEntity findById(Integer id);
+
     void create(FlowerRequest flowerRequest);
 }

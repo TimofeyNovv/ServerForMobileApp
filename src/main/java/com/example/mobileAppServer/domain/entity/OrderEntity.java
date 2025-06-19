@@ -5,12 +5,10 @@ import lombok.*;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
+
 @Entity
 @Setter
 @Getter
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
 @Table(name = "order_flower")
 public class OrderEntity extends BaseEntity{
 

@@ -21,6 +21,12 @@ public class FlowerServiceImpl implements FlowerService{
     }
 
     @Override
+    public FlowerEntity findById(Integer id) {
+        return flowerRepository.findById(id)
+                .orElseThrow(() -> new FlowerNotFoundException("FLower not found"));
+    }
+
+    @Override
     public void create(FlowerRequest flowerRequest) {
         FlowerEntity flowerEntity = FlowerEntity.builder()
                 .image(flowerRequest.getImage())
