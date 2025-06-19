@@ -23,7 +23,7 @@ public class FlowerServiceImpl implements FlowerService{
     @Override
     public FlowerEntity findById(Integer id) {
         return flowerRepository.findById(id)
-                .orElseThrow(() -> new FlowerNotFoundException("FLower not found"));
+                .orElseThrow(() -> new FlowerNotFoundException("Flower not found"));
     }
 
     @Override
