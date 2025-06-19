@@ -5,6 +5,7 @@ import com.example.mobileAppServer.infrastructure.implServices.FlowerServiceImpl
 import com.example.mobileAppServer.presentation.controller.auth.dto.RegisterRequest;
 import com.example.mobileAppServer.domain.entity.UserEntity;
 import com.example.mobileAppServer.infrastructure.implServices.UserServiceImpl;
+import com.example.mobileAppServer.presentation.controller.dto.FlowerRequest;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
