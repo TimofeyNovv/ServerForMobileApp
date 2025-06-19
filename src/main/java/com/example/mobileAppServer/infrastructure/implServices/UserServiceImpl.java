@@ -1,4 +1,4 @@
-package com.example.mobileAppServer.infrastructure.impl;
+package com.example.mobileAppServer.infrastructure.implServices;
 
 import com.example.mobileAppServer.domain.exception.UserNotFoundException;
 import com.example.mobileAppServer.domain.repository.UserRepository;

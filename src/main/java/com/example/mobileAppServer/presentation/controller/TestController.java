@@ -1,8 +1,10 @@
 package com.example.mobileAppServer.presentation.controller;
 
+import com.example.mobileAppServer.domain.entity.FlowerEntity;
+import com.example.mobileAppServer.infrastructure.implServices.FlowerServiceImpl;
 import com.example.mobileAppServer.presentation.controller.auth.dto.RegisterRequest;
 import com.example.mobileAppServer.domain.entity.UserEntity;
-import com.example.mobileAppServer.infrastructure.impl.UserServiceImpl;
+import com.example.mobileAppServer.infrastructure.implServices.UserServiceImpl;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/test")
 public class TestController {
     private final UserServiceImpl userService;
+    private final FlowerServiceImpl flowerService;
 
     @GetMapping("/email/{email}")
     public UserEntity findUserByEmail(@PathVariable String email){
