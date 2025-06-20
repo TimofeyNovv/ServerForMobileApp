@@ -33,7 +33,11 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         final String authHeader = request.getHeader("Authorization");//получение заголовка
         final String jwt;
         final String userEmail;
-        if (authHeader == null || !authHeader.startsWith("Bearer ") || request.getRequestURI().startsWith("/test/")){
+        if (authHeader == null ||
+                !authHeader.startsWith("Bearer ") ||
+                request.getRequestURI().startsWith("/test/")
+
+        ){
             filterChain.doFilter(request, response); //передача значений фильтру
             return;
         }

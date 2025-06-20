@@ -6,5 +6,7 @@ import com.example.mobileAppServer.domain.entity.UserEntity;
 public interface UserService {
     public UserEntity findByEmail(String email);
 
+    UserEntity findById(Integer id);
+
     public UserEntity create(UserEntity userEntity);
 }

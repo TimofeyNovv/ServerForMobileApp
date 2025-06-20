@@ -23,7 +23,13 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{//настройка защиты http путей
         http.csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(req ->
-                        req.requestMatchers("/api/v1/auth/**", "/test/**")//Содержит "белый список"
+                        req.requestMatchers("/api/v1/auth/**",
+                                        "/test/**",
+                                        "/swagger-ui.html",
+                                        "/swagger-ui/**",
+                                        "/v3/api-docs/**",
+                                        "/swagger-resources/**"
+                                        )//Содержит "белый список"
                                 .permitAll()//доступ к этому списку у всех
                                 .anyRequest()//остальные запросы только по авторизации
                                 .authenticated()
