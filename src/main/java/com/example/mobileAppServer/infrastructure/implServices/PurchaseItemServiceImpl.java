@@ -10,6 +10,7 @@ import com.example.mobileAppServer.presentation.controller.dto.FinishPurchaseReq
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Map;
 
@@ -27,6 +28,7 @@ public class PurchaseItemServiceImpl implements PurchaseItemService {
     private final OrderRepository orderRepository;
 
     @Override
+    @Transactional()
     public Integer finishPurchase(FinishPurchaseRequest request) {
         log.info("create order entity from request: {}", request);
 
