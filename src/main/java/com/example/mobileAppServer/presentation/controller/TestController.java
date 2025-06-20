@@ -21,6 +21,10 @@ public class TestController {
 
     private final UserServiceImpl userService;
 
+    @Operation(summary = "Create purchase")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Purchase created"),
+    })
     @PostMapping("/fpr")
     public ResponseEntity createPurchase(@Valid @RequestBody FinishPurchaseRequest finishPurchaseRequest){
         Integer orderId = purchaseItemService.finishPurchase(finishPurchaseRequest);
