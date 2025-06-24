@@ -22,12 +22,6 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public UserEntity findById(Integer id) {
-        return userRepository.findById(id)
-                .orElseThrow(() -> new UserNotFoundException("User Not Found"));
-    }
-
-    @Override
     @Transactional(readOnly = true)
     public UserEntity findById(Integer id) {
         return userRepository.findById(id)
@@ -35,6 +29,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    @Transactional
     public UserEntity create(UserEntity userEntity) {
         userRepository.save(userEntity);
         return userEntity;
